@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+	.custom-input-wrap {
+	    display: inline-block;
+	}
+	.custom-input-wrap input[type='radio'], .custom-input-wrap input[type='checkbox']{
+	    display: none;
+	}
+	.custom-input-wrap label{
+	    display: inline-block;
+	    cursor: pointer;
+	    position: relative;
+	    padding-left: 25px;
+	    margin-right: 30px;
+	    font-size: 13px;
+	    line-height: 22px;
+	}
+	.custom-input-wrap label:before {
+	    content: "";
+	    display: inline-block;
+	    width: 16px;
+	    height: 16px;
+	    margin-right: 10px;
+	    position: absolute;
+	    top: 3px;
+	    left: 0;
+	    width: 16px;
+	    height: 16px;
+	    content: '';
+	    border: 1px solid #c0c0c0;
+	    border-radius: 50%;
+	}
+	.custom-input-wrap label:after {
+	    content: "";
+	    position: absolute;
+	    display: none;
+	}
+	.checkbox label:before {
+	    border-radius: 3px;
+	}
+	input[type='radio']:checked + label:before {
+	    border: 1px solid #e17e14;
+	}
+	input[type='radio']:checked + label:after {
+	    display: block;
+	    top: 7px;
+	    left: 4px;
+	    width: 8px;
+	    height: 8px;
+	    border-radius: 50%;
+	    background: #e17e14;
+	}
+	input[type='checkbox']:checked + label:before {
+	    border: 1px solid #e17e14;
+	}
+	input[type='checkbox']:checked + label:after {
+	    display: block;
+	    top: 3px;
+	    left: 5px;
+	    box-sizing: border-box;
+	    width: 6px;
+	    height: 12px;
+	    transform: rotate(45deg);
+	    border-width: 2px;
+	    border-style: solid;
+	    border-color: #e17e14;
+	    border-top: 0;
+	    border-left: 0;
+	}
+	.isCheck{
+	    margin: 0;
+	}
+	.isCheck label{
+	    line-height: 25px;
+	}
+	</style>
+</head>
+<body style='width: 800px;margin: 100px auto'>
+	<div class="custom-input-wrap radio">
+		<input type="radio" id="Shangshi" name="isShangshi" checked=""><label for="Shangshi">上市公司</label>
+		<input type="radio" id="feiShangshi" name="isShangshi"><label for="feiShangshi">非上市公司</label>
+	</div>
+	<p>------------------------------------------------------------------</p>
+	<div class="form-group">
+        <div class="checkbox custom-input-wrap isCheck">
+          <input type="checkbox" id="check">
+          <label for="check">是否上传附件 <span class="iconfont icon-question"></span></label>
+        </div>
+    </div>
+</body>
+</html>
